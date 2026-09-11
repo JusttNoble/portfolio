@@ -7,6 +7,15 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/7cf0d8bdc4.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "5ilgxyQPF6gSEQBza",
+            });
+        })();
+    </script>
 </head>
 
 <body>
@@ -109,7 +118,7 @@
                         <span>
                             <button><i class="fa-brands fa-github"></i><a
                                     href="https://justtnoble.github.io/codeAlpha-imagegallery/">View</a></button>
-                            <button>Live Preview</button>
+                            <button disabled>Live Preview</button>
                         </span>
                     </div>
                 </div>
@@ -129,7 +138,7 @@
                         <span>
                             <button><i class="fa-brands fa-github"></i> <a
                                     href="https://justtnoble.github.io/farmingwebsite/">View</a></button>
-                            <button>Live Preview</button>
+                            <button disabled>Live Preview</button>
                         </span>
                     </div>
                 </div>
@@ -149,7 +158,7 @@
                         <span>
                             <button><i class="fa-brands fa-github"></i><a
                                     href="https://justtnoble.github.io/codeAlpha-calculator/">View</a></button>
-                            <button>Live Preview</button>
+                            <button disabled>Live Preview</button>
                         </span>
                     </div>
                 </div>
@@ -168,7 +177,7 @@
                         </div>
                         <span>
                             <button><i class="fa-brands fa-github"></i> View</button>
-                            <button>Live Preview</button>
+                            <button disabled>Live Preview</button>
                         </span>
                     </div>
                 </div>
@@ -190,21 +199,24 @@
                     <p><strong>E-mail:</strong><a href="#"> noblechiemela@gmail.com</a></p>
                 </div>
 
-                <form action="" class="animate">
+                <form onsubmit="sendMail(); return false;" class="animate" novalidate>
                     <p>Send Me A Mail</p> <br>
                     <label for="name">Name:</label>
-                    <input type="text" placeholder="Enter your name"><br>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                    <div class="errorMsg" id="nameError"></div><br>
                     <label>Email:</label>
-                    <input type="email" placeholder="johndoe@gmail.com"> <br>
+                    <input type="email" id="email" placeholder="johndoe@gmail.com" required>
+                    <div class="errorMsg" id="emailError"></div> <br>
                     <label for="subject">Subject</label>
-                    <textarea></textarea><br>
-                    <button id="submit">Send Mail</button>
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                    <div class="errorMsg" id="messageError"></div><br>
+                    <button id="submit" type="submit">Send Mail</button>
                 </form>
             </div>
         </section>
     </div>
 
-    <!-- Scroll Animation Script -->
+
     <script src="index.js"></script>
 </body>
 

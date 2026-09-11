@@ -38,8 +38,7 @@ header {
     scale: 1.3;
 }
 
-header nav ul,
-.socials {
+header .socials {
     display: flex;
     gap: 10px;
 }
@@ -55,11 +54,6 @@ header nav ul,
     transform: translateY(-5px) scale(1.1);
 }
 
-header a {
-    text-decoration: none;
-    font-size: 14px;
-    color: whitesmoke;
-}
 
 /* === Section Scroll Animations === */
 section {
@@ -402,6 +396,9 @@ section h2 {
     transition: .4s ease;
     background: darkgreen;
 }
+.project-info span button:disabled{
+    background: grey;
+}
 
 .project-info span button:hover {
     background: green;
@@ -470,6 +467,7 @@ section h2 {
     border-radius: 5px;
     border: 2px solid white;
     outline: none;
+    font-size: 16px;
 }
 .contact-box form input:focus{
     border-color: green;
@@ -481,6 +479,8 @@ section h2 {
     padding: 8px;
     border-radius: 10px;
     outline: none;
+    font-family: "poppins", sans-serif;
+    font-size: 16px;
 }
 .contact-box form button{
     padding: 12px 20px;
@@ -490,6 +490,7 @@ section h2 {
     position: relative;
     overflow: hidden;
     display: block;
+    font-size: 16px;
 }
 .contact-box form button:before{
     content:"";
@@ -508,6 +509,10 @@ section h2 {
 .contact-box form button:hover:before{
     width: 100%;
 
+}
+.errorMsg{
+    font-size: 12px;
+    padding: 6px;
 }
 
 
@@ -534,6 +539,7 @@ section h2 {
         text-align: start;
         line-height: 1.6;
         padding: 10px;
+        font-size: 14px;
     }
     .hero-image{
         height: 200px;
@@ -554,6 +560,7 @@ section h2 {
     .about-info p{
         width: 100%;
         line-height: 1.6;
+        font-size: 14px;
     }
     section h2 {
         margin-bottom: 7rem;
@@ -590,4 +597,5 @@ section h2 {
         align-self: center;
         margin-bottom: 30px;
     }
+   
 }
