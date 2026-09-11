@@ -48,6 +48,7 @@ header .socials {
     margin: 0 10px;
     font-size: 1.5rem;
     transition: transform 0.3s ease;
+    color: whitesmoke;
 }
 
 .socials a:hover {
